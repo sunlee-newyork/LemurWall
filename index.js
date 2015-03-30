@@ -11,14 +11,14 @@ loadOlapicSDK = function(){
             batch.fetch()
                 .then(function (media){
                     $.each(media, function (i, e) {
-                        mediaList.append('<li class="item"><span>'+e.get('images/original')+'</span><img src="'+e.get('images/mobile')+'" /></li>');
+                        mediaList.append('<li class="item"><a href="'+e.get('images/original')+'" target="_blank">'+e.get('images/original')+'</a><img src="'+e.get('images/mobile')+'" /></li>');
                     });
                     $(window).scroll(function() {   
                         if($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
                             batch.next()
                             .then(function (media){
                                 $.each(media, function (i, e) {                            
-                                    mediaList.append('<li class="item"><span>'+e.get('images/original')+'</span><img src="'+e.get('images/mobile')+'" /></li>');
+                                    mediaList.append('<li class="item"><a href="'+e.get('images/original')+'" target="_blank">'+e.get('images/original')+'</a><img src="'+e.get('images/mobile')+'" /></li>');
                                 });              
                             });
                         }
@@ -38,14 +38,14 @@ loadOlapicSDK = function(){
                 sortedBatch.fetch()
                     .then(function (media){
                         $.each(media, function (i, e) {
-                            mediaList.append('<li class="item"><span>'+e.get('images/original')+'</span><img src="'+e.get('images/mobile')+'" /></li>');
+                            mediaList.append('<li class="item"><a href="'+e.get('images/original')+'" target="_blank">'+e.get('images/original')+'</a><img src="'+e.get('images/mobile')+'" /></li>');
                         });
                         $(window).scroll(function() {   
                             if($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
                                 batch.next()
                                 .then(function (media){
                                     $.each(media, function (i, e) {                            
-                                        mediaList.append('<li class="item"><span>'+e.get('images/original')+'</span><img src="'+e.get('images/mobile')+'" /></li>');
+                                        mediaList.append('<li class="item"><a href="'+e.get('images/original')+'" target="_blank">'+e.get('images/original')+'</a><img src="'+e.get('images/mobile')+'" /></li>');
                                     });              
                                 });
                             }
@@ -72,14 +72,14 @@ loadOlapicSDK = function(){
                             streamBatch.fetch()
                                 .then(function (media){
                                     $.each(media, function (i, e) {
-                                        mediaList.append('<li class="item"><span>'+e.get('images/original')+'</span><img src="'+e.get('images/mobile')+'" /></li>');
+                                        mediaList.append('<li class="item"><a href="'+e.get('images/original')+'" target="_blank">'+e.get('images/original')+'</a><img src="'+e.get('images/mobile')+'" /></li>');
                                     });
                                     $(window).scroll(function() {   
                                         if($(window).scrollTop() + $(window).height() > $(document).height() - 1) {
                                             batch.next()
                                             .then(function (media){
                                                 $.each(media, function (i, e) {                            
-                                                    mediaList.append('<li class="item"><span>'+e.get('images/original')+'</span><img src="'+e.get('images/mobile')+'" /></li>');
+                                                    mediaList.append('<li class="item"><a href="'+e.get('images/original')+'" target="_blank">'+e.get('images/original')+'</a><img src="'+e.get('images/mobile')+'" /></li>');
                                                 });              
                                             });
                                         }
