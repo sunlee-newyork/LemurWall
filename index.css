@@ -1,0 +1,244 @@
+html {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body, ul, span, .header, .body, .container {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;  
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	background: #8800ff;
+	z-index: 1;
+	box-shadow: 0px 0px 15px;
+}
+
+.header > span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.4em;
+    font-family: "CaviarDreams";
+}
+
+.header .nav {
+	position: relative;
+	width: 80%;
+	height: 30px;
+	margin: 0 auto;
+	color: #111;
+	background: #ff0088;
+	font-family: "QuicksandRegular";
+	font-weight: 600;
+	font-size: .8em;
+}
+
+.header .nav .nav-list  {
+	position: relative;
+	display: block;
+	width: 80%;
+	height: 100%;
+	line-height: 30px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.header .nav .nav-list .subnav {
+	position: relative;
+	display: block;
+	float: left;
+	width: 35%;
+	font-weight: lighter;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.header .nav .nav-list .subnav:first-child {
+	width: 30%;
+}
+
+.header .nav .nav-list .subnav:hover {
+	cursor: pointer;
+}
+
+.header .nav .nav-list .subnav span {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.header .nav .nav-list .subnav:hover span {
+	background: #333;
+	color: #fff;
+	/* box-shadow: inset 0 0 6px #000; */
+}
+
+.header .nav .nav-list .subnav .subnav-list {
+	display: none;
+	padding: 0;
+	text-align: center;
+	line-height: 15px;
+	list-style: none;
+	background: #fff;
+	/* border-bottom-left-radius: 7px; */
+	/* border-bottom-right-radius: 7px; */
+}
+
+.header .nav .nav-list .subnav:hover .subnav-list {
+	display: block;
+}
+
+.header .nav .nav-list .subnav .subnav-list li {
+	display: block;
+	padding: 3px 3px 4px;
+	text-transform: lowercase;
+	line-height: 16px;
+	color: #fff;
+	background: #333;
+}
+
+.header .nav .nav-list .subnav .subnav-list li:last-child {
+	margin-bottom: 0;
+}
+
+.header .nav .nav-list .subnav .subnav-list li:hover {
+	color: #222;
+	background: #fff;
+	cursor: pointer;
+}
+
+.body {
+	position: relative;
+	height: auto;
+	background: #aaa;
+	overflow: visible;
+}
+
+.body .container {
+	position: relative;
+	width: 80%;
+	height: auto;
+	padding: 110px 20px 20px;
+	margin: 0 auto;
+	background: #000;
+	box-shadow: 0 0 30px #111;
+}
+
+.body .item-list {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.body .item {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px;
+	overflow: hidden;
+}
+
+.body .item > span {
+	position: absolute;
+	display: none;
+	top: 50%;
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	word-wrap: break-word;
+	text-align: center;
+	font-family: 'CodeProRegular';
+	color: #fff;
+	background: #0080FF;
+	box-shadow: 0 0 10px #111;
+}
+
+.body .item:hover span {
+	display: block;
+}
+
+.body .item img {
+	width: 100%;
+	border-radius: 30px;
+}
+
+@media screen and (min-width: 500px) {
+	.header .nav {
+		height: 40px;
+	}
+	.header .nav .nav-list {
+		width: 65%;		
+	}
+	.header .nav span {
+		font-size: 1.3em;
+		line-height: 40px;
+	}
+	.body .container {
+		padding-top: 130px;
+	}
+	.body .item {
+		display: inline-block;
+		width: 44%;
+		margin: 10px;
+	}
+	.body .item span {
+		padding: 10px;
+	}
+}
+@media screen and (min-width: 800px) {
+	.body .container {
+		padding-top: 120px;
+	}
+	.body .item {
+		width: 30%;
+	}
+}
+@media screen and (min-width: 940px) {
+	.header .nav, 
+	.body .container {
+		max-width: 750px;
+	}
+	.header .nav .nav-list {
+		width: 50%;		
+	}
+}
+
+/* - Fonts - */
+@font-face { font-family: 'QuicksandRegular'; src: url('/assets/fonts/quicksand/Quicksand-Regular.otf') format('opentype'); }
+@font-face { font-family: 'CaviarDreams'; src: url('/assets/fonts/caviardreams/CaviarDreams.ttf') format('truetype'); }
+@font-face {
+    font-family: 'CodeProRegular';
+    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot');
+    src: url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('/assets/fonts/codepro/regular/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* - end Fonts - */
