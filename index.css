@@ -3,7 +3,7 @@ html {
     -webkit-font-smoothing: antialiased !important;
 }
 
-body, ul, span, a, .header, .body, .container {
+body, ul, span, .header, .body, .container {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -155,7 +155,7 @@ body {
 	overflow: hidden;
 }
 
-.body .item > a {
+.body .item > span {
 	position: absolute;
 	display: none;
 	top: 50%;
@@ -168,15 +168,14 @@ body {
 	transform: translateY(-50%);
 	word-wrap: break-word;
 	text-align: center;
-	text-decoration: none;
 	font-family: 'CodeProRegular';
 	color: #fff;
 	background: #0080FF;
 	box-shadow: 0 0 10px #111;
 }
 
-.body .item:hover a,
-.body .item:active a {
+.body .item:hover span,
+.body .item:active span {
 	display: block;
 }
 
