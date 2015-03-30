@@ -76,7 +76,8 @@ body {
 	width: 30%;
 }
 
-.header .nav .nav-list .subnav:hover {
+.header .nav .nav-list .subnav:hover,
+.header .nav .nav-list .subnav:active {
 	cursor: pointer;
 }
 
@@ -86,10 +87,10 @@ body {
 	height: 100%;
 }
 
-.header .nav .nav-list .subnav:hover span {
+.header .nav .nav-list .subnav:hover span,
+.header .nav .nav-list .subnav:active span {
 	background: #333;
 	color: #fff;
-	/* box-shadow: inset 0 0 6px #000; */
 }
 
 .header .nav .nav-list .subnav .subnav-list {
@@ -99,11 +100,10 @@ body {
 	line-height: 15px;
 	list-style: none;
 	background: #fff;
-	/* border-bottom-left-radius: 7px; */
-	/* border-bottom-right-radius: 7px; */
 }
 
-.header .nav .nav-list .subnav:hover .subnav-list {
+.header .nav .nav-list .subnav:hover .subnav-list,
+.header .nav .nav-list .subnav:active .subnav-list {
 	display: block;
 }
 
@@ -120,7 +120,8 @@ body {
 	margin-bottom: 0;
 }
 
-.header .nav .nav-list .subnav .subnav-list li:hover {
+.header .nav .nav-list .subnav .subnav-list li:hover,
+.header .nav .nav-list .subnav .subnav-list li:active {
 	color: #222;
 	background: #fff;
 	cursor: pointer;
@@ -177,7 +178,8 @@ body {
 	box-shadow: 0 0 10px #111;
 }
 
-.body .item:hover span {
+.body .item:hover span,
+.body .item:active span {
 	display: block;
 }
 
